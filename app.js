@@ -35,9 +35,11 @@ const cheerio = require("cheerio");
     const ascendente = $('div[class="rueda"]')
       .text()
       .match(/[a,A]scendente: [A-Z][a-z,á,é,í,ó,ú]+/g)[0];
+    const image = $('div[class="rueda"] > a').attr("href");
     console.log(signoSolar);
     console.log(signoLunar);
     console.log(ascendente);
+    console.log(image);
   } catch (error) {
     console.log(error);
   }
